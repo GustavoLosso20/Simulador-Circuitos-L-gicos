@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador de Circuitos Lógicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="side">
+    <h1>Simulador de circuitos lógicos</h1>
+
+    <section>
+      <h2>Entradas e saídas</h2>
+      <div class="grid">
+        <button class="part" draggable="true" data-type="INPUT"><b>0/1</b>Chave</button>
+        <button class="part" draggable="true" data-type="OUTPUT"><b>●</b>LED</button>
+        <button class="part" draggable="true" data-type="CLOCK"><b>⊓⊔</b>Clock</button>
+      </div>
+    </section>
+    <section>
+      <h2>Portas</h2>
+      <div class="grid">
+        <button class="part" draggable="true" data-type="AND"><b>&amp;</b>AND</button>
+        <button class="part" draggable="true" data-type="OR"><b>≥1</b>OR</button>
+        <button class="part" draggable="true" data-type="NOT"><b>1</b>NOT</button>
+        <button class="part" draggable="true" data-type="NAND"><b>&amp;○</b>NAND</button>
+        <button class="part" draggable="true" data-type="NOR"><b>≥1○</b>NOR</button>
+        <button class="part" draggable="true" data-type="XOR"><b>=1</b>XOR</button>
+      </div>
+    </section>
+    <section>
+      <h2>Flip-flops</h2>
+      <div class="grid">
+        <button class="part" draggable="true" data-type="DFF"><b>D</b>Tipo D</button>
+        <button class="part" draggable="true" data-type="JKFF"><b>JK</b>Tipo JK</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Simulação</h2>
+      <div class="row">
+        <button id="run" class="primary">Pausar</button>
+        <button id="step" title="Inverte todos os clocks uma vez">Passo</button>
+        <button id="reset">Zerar</button>
+      </div>
+      <div class="row">
+        <select id="examples"><option value="">Abrir exemplo…</option></select>
+        <button id="clear">Novo</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nuvem</h2>
+      <input id="name" type="text" maxlength="80" placeholder="Nome do circuito" value="Novo circuito">
+      <div class="row"><button id="save" class="primary">Salvar</button></div>
+      <select id="saved" size="4"></select>
+      <div class="row"><button id="load">Carregar</button><button id="delete">Excluir</button></div>
+    </section>
+
+    <p class="help">
+      Arraste de um pino de saída até um pino de entrada para ligar. Clique numa chave para alternar 0/1.
+      Clique num pino de entrada ligado para soltar o fio. Duplo clique renomeia; botão direito ou Delete remove.
+    </p>
+  </aside>
+
+  <main>
+    <canvas id="board"></canvas>
+    <div class="wavewrap"><canvas id="wave"></canvas></div>
+  </main>
+  <div id="toast" role="status"></div>
+  <script type="module" src="js/client/main.js"></script>
+</body>
+</html>

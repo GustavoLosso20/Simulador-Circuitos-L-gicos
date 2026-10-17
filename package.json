@@ -1,0 +1,29 @@
+{
+  "name": "simulador-circuitos-logicos",
+  "version": "1.0.0",
+  "description": "Simulador web de circuitos lógicos digitais (No-Code/Low-Code) com persistência em nuvem",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build:client": "tsc -p tsconfig.client.json",
+    "dev:client": "tsc -p tsconfig.client.json --watch --preserveWatchOutput",
+    "dev:server": "tsx watch src/server/index.ts",
+    "dev": "npm run build:client && npm run dev:server",
+    "start": "npm run build:client && tsx src/server/index.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.client.json --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
