@@ -6,7 +6,8 @@ Projeto acadêmico de Engenharia da Computação da **Universidade do Vale do Pa
 
 **Autores:** Gustavo Afonso Losso e João Paulo Guinancio Ferreira.
 
-![Meio somador no simulador](docs/meio-somador.png)
+<img width="1456" height="860" alt="meio-somador" src="https://github.com/user-attachments/assets/9f391eec-3bda-447f-b903-bd2998e5bab2" />
+
 
 ## Funcionalidades
 
@@ -42,7 +43,7 @@ As portas seguem a simbologia da norma IEC 60617.
 
 ## Arquitetura
 
-![Arquitetura do simulador](docs/arquitetura.png)
+<img width="1488" height="647" alt="arquitetura" src="https://github.com/user-attachments/assets/53aac159-b8cc-43e3-844b-0a55733401fc" />
 
 O front-end em Canvas faz a edição e a simulação no navegador. O back-end é *stateless*: uma API REST em Express que apenas persiste as topologias no MongoDB, por meio do Mongoose. Os tipos do grafo ficam em um módulo compartilhado entre os dois lados.
 
@@ -62,7 +63,7 @@ public/         index.html, CSS e JavaScript compilado
 
 O motor foi verificado com testes sobre tabelas-verdade das portas, meio somador, latch SR, flip-flops D e JK, contador de 2 bits e registrador de deslocamento.
 
-![Contador assíncrono de 2 bits](docs/contador-2-bits.png)
+<img width="1456" height="780" alt="contador-2-bits" src="https://github.com/user-attachments/assets/4a793034-418a-4707-acc6-900f2f3c3182" />
 
 ## Tecnologias
 
@@ -169,11 +170,7 @@ O servidor valida os tipos de componente, a unicidade dos identificadores e se c
 
 MATERZOK, M. *DigitalJS: a Visual Verilog Simulator for Teaching*. 2019.
 
-## Licença
 
-Defina aqui a licença do projeto (por exemplo, MIT) e adicione o arquivo `LICENSE` na raiz do repositório.
-<img width="1488" height="647" alt="arquitetura" src="https://github.com/user-attachments/assets/ab33958a-3316-4960-81a7-c7768a3d4b1f" />
-<img width="1456" height="780" alt="contador-2-bits" src="https://github.com/user-attachments/assets/263b89ff-fcc6-400f-b528-78b1ea6c3fe0" />
-<img width="1456" height="860" alt="meio-somador" src="https://github.com/user-attachments/assets/872f06e9-09b9-4e03-b127-3de24618bf53" />
+
 
 
